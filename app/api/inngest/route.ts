@@ -185,7 +185,7 @@ const generateBlogPost = inngest.createFunction(
         }`
       )
       const { results } = await response.json()
-      return results?.[0]?.urls?.regular ?? "https://zgcgykowwrkrbovyatuw.supabase.co"
+      return results?.[0]?.urls?.regular ?? ""
     })
 
     // Step-4A Save Post and Update Idea Status
