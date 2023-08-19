@@ -215,7 +215,7 @@ const generateBlogPost = inngest.createFunction(
     // Step-5 Revalidate Pages
     await Promise.all([
       step.run("revalidate posts", async () => {
-        await fetch(`http://localhost:3000/api/revalidate`, {
+        await fetch(`https://background-jobs-nextjs13-inngest-two.vercel.app/api/revalidate`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -224,7 +224,7 @@ const generateBlogPost = inngest.createFunction(
         })
       }),
       step.run("revalidate post", async () => {
-        await fetch(`http://localhost:3000/api/revalidate`, {
+        await fetch(`https://background-jobs-nextjs13-inngest-two.vercel.app/api/revalidate`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -233,7 +233,7 @@ const generateBlogPost = inngest.createFunction(
         })
       }),
       step.run("revalidate home", async () => {
-        await fetch(`http://localhost:3000/api/revalidate`, {
+        await fetch(`https://background-jobs-nextjs13-inngest-two.vercel.app/api/revalidate`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
